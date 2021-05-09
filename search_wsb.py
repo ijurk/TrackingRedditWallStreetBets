@@ -5,8 +5,6 @@ from psaw import PushshiftAPI
 import datetime as dt
 
 
-
-
 connection = psycopg2.connect(host=config.DB_HOST, database=config.DB_NAME, user=config.DB_USER, password=config.DB_PASS)
 
 cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
@@ -19,7 +17,6 @@ stocks ={}
 
 for row in rows:
     stocks['$' + row['symbol']] = row['id']
-
 
 
 api = PushshiftAPI()
