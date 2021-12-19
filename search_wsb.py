@@ -20,12 +20,12 @@ for row in rows:
 
 
 api = PushshiftAPI()
-start_time=int(dt.datetime(2021, 5, 1).timestamp())
+start_time=int(dt.datetime(2021, 5, 9).timestamp())
 
 submissions = api.search_submissions(after=start_time,
                                     subreddit='wallstreetbets',
                                     filter=['url','author', 'title', 'subreddit'])
-print(submissions)
+##print(submissions)
 
 
 for submission in submissions:
